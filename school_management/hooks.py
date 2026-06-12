@@ -36,17 +36,17 @@ web_include_js = "/assets/school_management/js/school_management.js"
 website_theme_scss = "school_management/public/css/website"
 
 # include js, css files in header of web form
-# webform_include_js = {"doctype": "public/js/doctype.js"}
-# webform_include_css = {"doctype": "public/css/doctype.css"}
+webform_include_js = {"doctype": "public/js/doctype.js"}
+webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
-# doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
 # Svg Icons
 # ------------------
@@ -247,3 +247,14 @@ website_theme_scss = "school_management/public/css/website"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+    {
+        "dt": "Workflow"
+    },
+    {
+        "dt": "Report"
+    },
+    {
+        "dt": "Role"
+    }
+]
