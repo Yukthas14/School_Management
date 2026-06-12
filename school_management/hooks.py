@@ -25,15 +25,15 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/school_management/css/school_management.css"
-# app_include_js = "/assets/school_management/js/school_management.js"
+app_include_css = "/assets/school_management/css/school_management.css"
+app_include_js = "/assets/school_management/js/school_management.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/school_management/css/school_management.css"
-# web_include_js = "/assets/school_management/js/school_management.js"
+web_include_css = "/assets/school_management/css/school_management.css"
+web_include_js = "/assets/school_management/js/school_management.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "school_management/public/scss/website"
+website_theme_scss = "school_management/public/css/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
