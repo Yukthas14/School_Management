@@ -1,33 +1,100 @@
-### School_management
+# School Management
 
-school management
+A custom Frappe application developed to manage basic school operations such as student management, course enrollment, reporting, and admission workflows.
 
-### Installation
+## Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+### Student Management
+
+* Create and manage Student records.
+* Store student details such as:
+
+  * Student Name
+  * Age
+  * Grade
+  * Address
+  * Department
+
+### Course Enrollment
+
+* Manage student course enrollments.
+* Maintain relationships between students and courses.
+
+### Student APIs
+
+Implemented server-side APIs using Frappe framework functions:
+
+* `frappe.new_doc()` – Create new Student records.
+* `frappe.get_doc()` – Fetch complete Student details.
+* `frappe.db.get_value()` – Retrieve specific field values.
+* `frappe.db.set_value()` – Update field values directly in the database.
+
+### Reports
+
+Implemented Query Reports including:
+
+* **Student List Report**
+
+  * Displays student details such as name, age, grade, and address.
+
+* **Course Enrollment Report**
+
+  * Displays information about student enrollments.
+
+* **Department-wise Student Count Report**
+
+  * Shows the number of students in each department using SQL aggregation.
+
+### Workflow and Permissions
+
+Implemented a Student Admission Workflow with role-based approvals.
+
+Workflow States:
+
+Admission Applied
+↓
+Teacher Verification
+↓
+Principal Approval
+↓
+Admission Confirmed
+
+Roles Used:
+
+* Teacher
+* Principal
+* Administrator
+
+The workflow demonstrates how different users can perform specific actions based on assigned roles and permissions.
+
+
+## Installation
+
+Clone the repository inside your Frappe Bench:
 
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app school_management
+cd ~/frappe-bench/apps
+git clone https://github.com/Yukthas14/school_management.git
 ```
 
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+Install the app:
 
 ```bash
-cd apps/school_management
-pre-commit install
+cd ~/frappe-bench
+bench --site <site-name> install-app school_management
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+Run migrations:
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+```bash
+bench migrate
+```
 
-### License
+Start the server:
 
-mit
+```bash
+bench start
+```
+
+
+
